@@ -1,0 +1,21 @@
+﻿@model VidlyTesting.ViewModels.CustomerViewModels
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+@if (Model.Movies.Count == 0)
+{
+    <p> We dont have any list of movies</p>
+}
+else
+{
+<ul>
+    @foreach (var movies in Model.Movies)
+    {
+        <li> @movies.Name</li>
+    }
+</ul>
+}
